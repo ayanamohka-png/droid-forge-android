@@ -5,9 +5,11 @@
 ## Архитектура
 
 - Android `UsbManager` перечисляет OTG-устройства и показывает штатный диалог разрешения. Root и доступ к `/dev/bus/usb` не используются.
-- Rust JNI библиотека классифицирует USB interface descriptors.
-- Desktop backend запускает внешние adb/fastboot процессы и на Android host непригоден. Этот каркас пока только обнаруживает USB устройства и запрашивает доступ; он не реализует ADB/Fastboot transport и не выполняет команды. Само USB разрешение не делает телефон ADB host.
-- Следующий этап для команд: реализовать ADB host protocol и Fastboot USB protocol поверх bulk endpoints через Android `UsbDeviceConnection` с системным USB разрешением.
+- Android `UsbManager` предоставляет USB-разрешение; ADB Host и Fastboot transport работают через bulk endpoints `UsbDeviceConnection`.
+- ADB поддерживает RSA-авторизацию через ключ Android Keystore, shell-команды, sync push/pull, установку APK и sideload ZIP. При первом подключении разблокируйте подключённый телефон и подтвердите ключ DroidForge в его диалоге USB-отладки.
+- Fastboot поддерживает getvar, flash/boot образов, erase разделов, unlock/lock загрузчика и reboot. Разрушительные операции требуют подтверждения в приложении.
+- Скриншоты и logcat сохраняются в приватный каталог приложения; pull сохраняет файл в app-specific external files. OTG-устройство должно поддерживать режим USB host.
+- Для USB-отладки подключаемый Android должен быть в режиме ADB и иметь включённую USB-отладку. Для Fastboot его нужно отдельно перевести в bootloader/Fastboot mode.
 
 ## Сборка на Arch Linux
 

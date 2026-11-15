@@ -1,0 +1,90 @@
+{
+ ":app:debug:compile": {
+  "hit": false,
+  "inputs": {
+   "aj": "4566663c3876e022",
+   "api": "error",
+   "cp": [
+    "2bef351c720bed62adf3d87c0a78e1b093d6e877da9098d69e20d435f2d7a005",
+    "7b3234d0adbe99dabd61b6e97e57ae6efed9afae1beccc0b30728ee7641a638a"
+   ],
+   "gen": "88ca509cf766d0f80baaa9b484d3fc2dae2aa5fcefea85ad0b43fba592dcd15e",
+   "jargs": [],
+   "java": 17,
+   "javac": "1f21021c1e073d8a",
+   "kapt": [],
+   "kaptargs": {},
+   "kargs": [],
+   "kplug": [],
+   "ksp": [],
+   "kspargs": {},
+   "kspv": null,
+   "kt": "2.4.21",
+   "ktjvm": null,
+   "proc": [],
+   "src": "05b04a4cf52975706bed88e7d34f33871a82cf78c5351ba29124c9d8e82347fa",
+   "strip": [],
+   "variant": "debug",
+   "vb": null
+  },
+  "key": "ac6f1dcd55a83415"
+ },
+ ":app:debug:d8": {
+  "hit": false,
+  "inputs": {
+   "aj": "4566663c3876e022",
+   "co": [],
+   "d8": "47105a97bf4a3392",
+   "jars": [
+    "c7acd49b7ce26bfb04e81c75a969a3a3eae329061c6f20884efbcd2fd42d0ea9",
+    "bd8250210584cb659847dce9cda660f8e9906e5def7fbebcea93dc6dcb6a88a3",
+    "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+   ],
+   "min": 23,
+   "minify": false,
+   "r8args": [],
+   "release": false,
+   "rules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "key": "ff036ad353407ce9"
+ },
+ ":app:debug:link-app": {
+  "hit": true,
+  "inputs": {
+   "aapt2": "16810d95aa6d4ebf",
+   "appid": "dev.droidforge.mobile",
+   "assets": null,
+   "extra": [],
+   "final": true,
+   "manifest": "e1ff2bb2f23c9888ce81553bb36e25c2cfaea508d407f47fec97e53940411f55",
+   "ns": "dev.droidforge.mobile",
+   "overlays": [],
+   "sdk": [
+    23,
+    35,
+    35
+   ],
+   "ver": [
+    1,
+    "0.1.0"
+   ]
+  },
+  "key": "9ebcb0111dc48005"
+ },
+ ":app:debug:minapi": {
+  "hit": false,
+  "inputs": {
+   "aj": "4566663c3876e022",
+   "classes": "c7acd49b7ce26bfb04e81c75a969a3a3eae329061c6f20884efbcd2fd42d0ea9",
+   "compile": 35,
+   "cp": [
+    "2bef351c720bed62adf3d87c0a78e1b093d6e877da9098d69e20d435f2d7a005",
+    "7b3234d0adbe99dabd61b6e97e57ae6efed9afae1beccc0b30728ee7641a638a"
+   ],
+   "dexer": "47105a97bf4a3392",
+   "min": 23,
+   "v": "1"
+  },
+  "key": "f7aaec999f71790f"
+ }
+}

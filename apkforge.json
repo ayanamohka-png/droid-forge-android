@@ -1,0 +1,14 @@
+{
+  "modules": {
+    "app": {
+      "type": "app",
+      "namespace": "dev.droidforge.mobile",
+      "applicationId": "dev.droidforge.mobile",
+      "minSdk": 23,
+      "targetSdk": 35,
+      "compileSdk": 35,
+      "versionCode": 1,
+      "versionName": "0.1.0"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[  0.1s] == :app (debug)
+         cached   :app:debug:link-app
+         $ /usr/bin/javac -version
+         javac 27.0.1.0.3
+         rebuild  :app:debug:compile  (changed: src)
+         $ /home/rei/.apkforge/toolchain/kotlinc/bin/kotlinc -no-stdlib -no-reflect -jvm-target 17 -module-name _app -d /home/rei/projects/droid-forge-android/.apkforge/cache/ac/ac6f1dcd55a83415dd6cda104b53ddd70095c4b2a2b3984fb0b0249f86774a7e.tmp/kt -cp /home/rei/.apkforge/toolchain/android-jars/android-35.jar:/home/rei/.apkforge/toolchain/kotlinc/lib/kotlin-stdlib.jar:/home/rei/.apkforge/toolchain/kotlinc/lib/annotations-13.0.jar -no-jdk /home/rei/projects/droid-forge-android/app/src/main/java/dev/droidforge/mobile/AdbAuthKey.kt /home/rei/projects/droid-forge-android/app/src/main/java/dev/droidforge/mobile/MainActivity.kt /home/rei/projects/droid-forge-android/app/src/main/java/dev/droidforge/mobile/UsbProtocols.kt /home/rei/projects/droid-forge-android/.apkforge/cache/9e/9ebcb0111dc48005dbd8b3f98d97b501b1ab66cc9ad78c9e25c26c42ed609193/gen/dev/droidforge/mobile/R.java
+         $ /usr/bin/javac -J-XX:+UseSerialGC -J-XX:TieredStopAtLevel=1 -J-Xmx1g @/home/rei/projects/droid-forge-android/.apkforge/cache/ac/ac6f1dcd55a83415dd6cda104b53ddd70095c4b2a2b3984fb0b0249f86774a7e.tmp/javac.args
+         rebuild  :app:debug:minapi  (changed: classes)
+         rebuild  :app:debug:d8  (changed: jars)
+         $ /usr/bin/java -Xmx1536m -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -Xshare:auto -cp /home/rei/.apkforge/toolchain/dexer/r8-d8.jar com.android.tools.r8.D8 --debug --min-api 23 --lib /home/rei/.apkforge/toolchain/android-jars/android-35.jar --output /home/rei/projects/droid-forge-android/.apkforge/cache/ff/ff036ad353407ce9051ba73726030947fa3fc34106652011b7de03ea04ea4da1.tmp/dex /home/rei/projects/droid-forge-android/.apkforge/cache/ac/ac6f1dcd55a83415dd6cda104b53ddd70095c4b2a2b3984fb0b0249f86774a7e/classes.jar /home/rei/.apkforge/toolchain/kotlinc/lib/kotlin-stdlib.jar /home/rei/.apkforge/toolchain/kotlinc/lib/annotations-13.0.jar
+         $ /home/rei/.apkforge/toolchain/aapt2/zipalign -c -p 4 /home/rei/projects/droid-forge-android/build/outputs/dev.droidforge.mobile-debug.apk
+         $ /home/rei/.apkforge/toolchain/aapt2/zipalign -c -P 16 -v 4 /home/rei/projects/droid-forge-android/build/outputs/dev.droidforge.mobile-debug.apk
+         Verifying alignment of /home/rei/projects/droid-forge-android/build/outputs/dev.droidforge.mobile-debug.apk (4)...
+      49 AndroidManifest.xml (OK - compressed)
+     882 classes.dex (OK - compressed)
+  798944 resources.arsc (OK)
+  802816 lib/arm64-v8a/libdroidforge_mobile_core.so (OK)
+ 1113962 META-INF/kotlin-stdlib.kotlin_module (OK - compressed)
+ 1117322 kotlin/kotlin.kotlin_builtins (OK - compressed)
+ 1122938 kotlin/annotation/annotation.kotlin_builtins (OK - compressed)
+ 1123556 kotlin/collections/collections.kotlin_builtins (OK - compressed)
+ 1125507 kotlin/concurrent/atomics/atomics.kotlin_builtins (OK - compressed)
+ 1126692 kotlin/coroutines/coroutines.kotlin_builtins (OK - compressed)
+ 1126880 kotlin/internal/internal.kotlin_builtins (OK - compressed)
+ 1127305 kotlin/ranges/ranges.kotlin_builtins (OK - compressed)
+ 1128753 kotlin/reflect/reflect.kotlin_builtins (OK - compressed)
+ 1130262 META-INF/kotlin-stdlib-jdk7.kotlin_module (OK - compressed)
+ 1130446 META-INF/kotlin-stdlib-jdk8.kotlin_module (OK - compressed)
+ 1130711 META-INF/maven/org.jetbrains/annotations/pom.xml (OK - compressed)
+ 1131941 META-INF/maven/org.jetbrains/annotations/pom.properties (OK - compressed)
+ 1132095 META-INF/MANIFEST.MF (OK - compressed)
+ 1133079 META-INF/CERT.SF (OK - compressed)
+ 1134119 META-INF/CERT.RSA (OK - compressed)
+Verification successful
+[ 47.6s] ok    verified: signature v1 v2 v3 [internal only; apksigner not found]; zip alignment [zipalign]; 16 KB ELF alignment of 1 64-bit native library [internal + readelf]; 16 KB zip alignment of 1 stored native library [internal + zipalign]; 1 manifest component in dex [internal only; dexdump not found]; android:exported declared on 1 intent-filter component [internal only]
+[ 47.6s] ok    APK  build/outputs/dev.droidforge.mobile-debug.apk  (1.1 MB)  sha256 b2f19a24932bdbe1
+[ 47.6s] actions: 1 cached, 3 built
+[ 47.6s] done in 47.4s
